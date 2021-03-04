@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <title>Stocks</title>
+    {%  load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
+</header>
+
+<body>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
+    <div class="vertical-menu">
+        <a href="#" class="active">Gerard</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Performance</a>
+    </div>
+    <div class="stock_btn" id="stock_btn">
+        <br>
+        <img id="stock_btn" src="{% static 'svg/capital.svg' %}">
+    </div>
+</body>
+</html>
