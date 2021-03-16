@@ -8,16 +8,18 @@
 </header>
 
 <body>
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
-    <div class="vertical-menu">
-        <a href="#" class="active">Gerard</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Performance</a>
-    </div>
-    <div class="stock_btn" id="stock_btn">
-        <br>
-        <img id="stock_btn" src="{% static 'svg/capital.svg' %}">
+    <div class="dashboard">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
+        <div class="vertical-menu">
+            <a href="#" class="active">Gerard</a>
+            <a href="#">Dashboard</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Performance</a>
+        </div>
+        <div class="total_stocks">
+            <button class="btn success">{{ num_stocks }} stocks</button>
+        </div>
     </div>
 </body>
 </html>
