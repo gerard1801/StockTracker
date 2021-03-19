@@ -5,15 +5,17 @@ from yahoofinancials import YahooFinancials
 
 # Create your views here.
 def Home(request):
-    stock_data = pd.read_csv("/Users/gerardvanderwel/Documents/Stock_data.csv")
-    stocks = 1
+    #Stock data
+    stock_data = pd.read_csv("/Users/gerardvanderwel/Documents/Stock_data.csv", sep=';')
+
+    #extract and calculate total amount of stocks
+    amount_data = stock_data.loc[:, "amount"]
+    total_stock_amount = amount_data.sum()
+
     stock_price = YahooFinancials("AAPL")
     print(stock_price.get_stock_price_data())
-
-    print(stock_data)
-    print(stocks)
     return render(request, 'Stocks.html', {
-        'num_stocks': stocks,
+        'num_stocks':total_stock_amount,
     })
 
 def Tracker(request):

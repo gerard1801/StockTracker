@@ -26,3 +26,9 @@ body {
     background-color: #605f64; /* Add a green color to the "active/current" link */
     color: white;
 }
+
+.total_stocks {
+    position: relative;
+    top: 20%;
+    left: 30%;
+}

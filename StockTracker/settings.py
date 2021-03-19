@@ -1,3 +1,4 @@
+from StockTracker.secret_settings import *
 """
 Django settings for StockTracker project.
 
@@ -12,6 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 
 import os
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,8 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'tv8b=mwsrwke3&(r3f$ioz#_36t)lac3qyk5wpi#bq^t#$+3e+'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
