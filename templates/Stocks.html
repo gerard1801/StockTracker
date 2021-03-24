@@ -3,6 +3,7 @@
 <header>
     <meta charset="UTF-8">
     <title>Stocks</title>
+    {% include "navigation_bar.html" %}
     {%  load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
 </header>
@@ -24,7 +25,8 @@
         </div>
         <div class="port_value">
             <br>
-            <h1>Portfolio Value: {{ portfolio_value }}</h1>
+            <h1>Portfolio Value:</h1>
+            <h2>$ {{ portfolio_value }}</h2>
         </div>
         <div class="profit">
             <br>

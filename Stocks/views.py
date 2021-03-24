@@ -36,6 +36,7 @@ def calculate_port_value(amount_data, stock_tickers):
     total_port_value = 0
     for i in stock_tickers:
         price_dict = YahooFinancials(i).get_stock_price_data()
+        print(price_dict)
         price = price_dict.get(i).get('regularMarketPrice')
         stock_value.append(price)
     for x in range(len(stock_value)):
