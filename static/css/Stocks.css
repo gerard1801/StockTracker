@@ -4,33 +4,50 @@ body {
     height: 100%;
 }
 
-.vertical-menu {
-    width: 15%;
-    height: 30%;
-    font-size: 35px;
+.stock_table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
 }
 
-.vertical-menu a {
-    background-color: #eee; /* Grey background color */
-    color: black; /* Black text color */
-    display: block; /* Make the links appear below each other */
-    padding: 12px; /* Add some padding */
-    text-decoration: none; /* Remove underline from links */
-}
-
-.vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.vertical-menu a.active {
-    background-color: #605f64; /* Add a green color to the "active/current" link */
+.stock_table thead tr {
+    background-color: rgb(33,191,242);
     color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.stock_table th, .stock_table td {
+    padding: 12px 15px;
+}
+
+.stock_table tbody tr {
+    border-bottom: thin solid rgb(33,191,242);
+    color: white;
+}
+
+.stock_table tbody tr.active-row {
+    font-weight: bold;
+    color: rgb(33,191,242);
+}
+
+.stock_table tbody tr:nth-of-type(even) {
+    background-color: rgb(31,36,48);
+}
+
+.stock_table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(33,191,242);
 }
 
 .total_stocks {
     background-color:rgb(31,36,48);
     position: relative;
-    top: 25%;
+    top: 35%;
     left: 40%;
     height: 20%;
     width: 20%;
@@ -63,4 +80,8 @@ body {
 
 .day_change h1 {
     color: white;
+}
+
+tr {
+    color: red;
 }

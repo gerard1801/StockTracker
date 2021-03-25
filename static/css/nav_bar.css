@@ -4,6 +4,29 @@
     background-color:rgb(31,36,48);
 }
 
+#app-name p {
+    float: left;
+    color: white;
+    height: 100%;
+    width: 30%;
+}
+
+#app-name b {
+    float: left;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    color:rgb(33,191,242);
+    padding-left: 50px;
+    padding-top: 20px;
+}
+
+#app-name i {
+    float: left;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    padding-top: 25px;
+}
+
 #nav-bar {
     float: right;
     width: 70%;
@@ -27,8 +50,15 @@
 }
 
 #dashboard h1, #performance h1, #portfolio h1, #dividends h1 {
+    float: left;
     color: white;
     font-family: Arial, sans-serif;
     font-size: 20px;
     margin: 35px auto;
+    padding-top: 5px;
+}
+
+#dashboard:hover, #performance:hover, #portfolio:hover, #dividends:hover{
+    border-bottom:5px solid;
+    color:rgb(33,191,242);
 }

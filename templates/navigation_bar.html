@@ -4,11 +4,12 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/nav_bar.css' %}">
     <div id="header">
+        <div id="app-name"><p><b>Stonk</b><i>Tracker</i></p></div>
         <div id="nav-bar">
             <div id="dashboard"><a onclick="location.href='/'"><img id="dashboard_svg" src="{% static 'svg/dashboard.svg' %}"><h1>Dashboard</h1></a></div>
-            <div id="portfolio"><a onclick="location.href='/'"><img id="portfolio_svg" src="{% static 'svg/bond.svg' %}"><h1>Portfolio</h1></a></div>
-            <div id="performance"><a onclick="location.href='/'"><img id="performance_svg" src="{% static 'svg/desktop.svg' %}"><h1>Performance</h1></a></div>
-            <div id="dividends"><a onclick="location.href='/'"><img id="dividend_svg" src="{% static 'svg/capital.svg' %}"><h1>Dividends</h1></a></div>
+            <div id="portfolio"><a onclick="location.href='/portfolio'"><img id="portfolio_svg" src="{% static 'svg/bond.svg' %}"><h1>Portfolio</h1></a></div>
+            <div id="performance"><a onclick="location.href='/performance'"><img id="performance_svg" src="{% static 'svg/desktop.svg' %}"><h1>Performance</h1></a></div>
+            <div id="dividends"><a onclick="location.href='/dividends'"><img id="dividend_svg" src="{% static 'svg/capital.svg' %}"><h1>Dividends</h1></a></div>
         </div>
     </div>
 </header>

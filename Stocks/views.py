@@ -24,7 +24,17 @@ def Home(request):
     #
     price_change_day = day_change(amount_data, stock_tickers)
 
+    test = [["AAPL","Apple"],["TSLA", "Tesla"]]
+    testen = [{"ticker":"AAPL", "name":"Apple"},{"ticker":"TSLA", "name":"Tesla"}]
+#{% for tickers in stock_tickers %}
+        #            <tr>
+        #                <td>{{ tickers }}</td>
+         #           </tr>
+          #      {% endfor %}
+
     return render(request, 'Stocks.html', {
+        'test':test,
+        'stock_tickers':stock_tickers,
         'num_stocks':total_stock_amount,
         'portfolio_value':round(total_stock_value, 1),
         'profit':round(total_profit, 1),
@@ -60,7 +70,11 @@ def day_change(amount_data, stock_tickers):
         day_price_change += price_change_list[x] * amount_data[x]
     return day_price_change
 
+def Portfolio(request):
+    return render(request, 'Portfolio.html')
 
-def Tracker(request):
+def Performance(request):
+    return render(request, 'Performance.html')
 
-    return render(request, 'Tracker.html')
+def Dividends(request):
+    return render(request, 'Dividends.html')

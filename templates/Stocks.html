@@ -9,16 +9,45 @@
 </header>
 
 <body>
+    <div>
+        <script type="text/javascript">
+            var myArray = [["AAPLE","Apple"],["TSLA", "Tesla"]];
+            var result = "<table border=1>";
+            for(var i=0; i<myArray.length; i++) {
+                result += "<tr>";
+                for(var j=0; j<myArray[i].length; j++){
+                    result += "<td>"+myArray[i][j]+"</td>";
+                }
+                result += "</tr>";
+            }
+            result += "</table>";
+        </script>
+    </div>
+
+
+    <div class="table">
+        <table class="stock_table">
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AAPL</td>
+                    <td>Apple</td>
+                </tr>
+                <tr class="active-row">
+                    <td>TSLA</td>
+                    <td>Tesla</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <div class="dashboard">
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
-        <div class="vertical-menu">
-            <a href="#" class="active">Gerard</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Performance</a>
-            <a href="#">Dividends</a>
-        </div>
         <div class="total_stocks">
             <br>
             <h1>{{ num_stocks }} stocks</h1>
@@ -36,6 +65,10 @@
             <br>
             <h1>Change today: {{ day_change }}</h1>
         </div>
+    </div>
+    <div>
+        <script src="{% static 'javascript/maketab.js' %}"></script>
+        <script>createTable([["AAPLE3","Apple"],["TSLA", "Tesla"]])</script>
     </div>
 </body>
 </html>

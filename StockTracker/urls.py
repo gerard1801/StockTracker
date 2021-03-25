@@ -20,5 +20,7 @@ from Stocks import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Home),
-    path('tracker', views.Tracker),
+    path('portfolio', views.Portfolio),
+    path('performance', views.Performance),
+    path('dividends', views.Dividends),
 ]
