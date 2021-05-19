@@ -28,6 +28,8 @@ def Home(request):
 
     portfolio_table = table_data(col_names, stock_tickers, amount_data.tolist(), price_data)
 
+    historical_price(stock_tickers)
+
     return render(request, 'Stocks.html', {
         'portfolio_table':portfolio_table,
         'headers':col_names,
@@ -44,6 +46,10 @@ def pull_yahoo_data(stock_tickers):
         yh = YahooFinancials(i)
         yahoo_list.append(yh.get_stock_price_data())
     return yahoo_list
+
+def historical_price(stock_tickers):
+    stock_historic_price = YahooFinancials(stock_tickers).get_historical_price_data('2021-03-19', '2021-05-18', 'daily')
+    print(stock_historic_price)
 
 def calculate_port_value(amount_data, stock_tickers, yahoo_data):
     stock_value = []

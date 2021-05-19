@@ -9,6 +9,30 @@
 </header>
 
 <body>
+    <div class="dashboard">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
+        <div class="total_stocks">
+            <br>
+            <h1>Total amount of stocks:</h1>
+            <h2>{{ num_stocks }}</h2>
+        </div>
+        <div class="port_value">
+            <br>
+            <h1>Portfolio Value:</h1>
+            <h2>$ {{ portfolio_value }}</h2>
+        </div>
+        <div class="profit">
+            <br>
+            <h1>Profit:</h1>
+            <h2>$ {{ profit }}</h2>
+        </div>
+        <div class="day_change">
+            <br>
+            <h1>Change today:</h1>
+            <h2>$ {{ day_change }}</h2>
+        </div>
+    </div>
     <div class="table">
         <table class="stock_table">
             <thead>
@@ -29,27 +53,6 @@
                 {% endfor %}
             </tbody>
         </table>
-    </div>
-    <div class="dashboard">
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/Stocks.css' %}">
-        <div class="total_stocks">
-            <br>
-            <h1>{{ num_stocks }} stocks</h1>
-        </div>
-        <div class="port_value">
-            <br>
-            <h1>Portfolio Value:</h1>
-            <h2>$ {{ portfolio_value }}</h2>
-        </div>
-        <div class="profit">
-            <br>
-            <h1>Profit: {{ profit }}</h1>
-        </div>
-        <div class="day_change">
-            <br>
-            <h1>Change today: {{ day_change }}</h1>
-        </div>
     </div>
 </body>
 </html>
